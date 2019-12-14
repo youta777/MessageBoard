@@ -176,10 +176,10 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4, < 0.6.0)
-  pry-rails
+  pry-rails (= 0.3.9)
   puma (~> 3.11)
   rails (~> 5.2.4)
-  rb-readline
+  rb-readline (= 0.5.5)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
