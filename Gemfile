@@ -37,7 +37,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
-  gem 'pry-rails'
+  gem 'pry-rails', '0.3.9'
+  gem 'rb-readline', '0.5.5'
 end
 
 group :development do
