@@ -41,6 +41,7 @@ group :development, :test do
   gem 'rb-readline', '0.5.5'
 
   gem 'kaminari', '~> 1.1.1'
+  gem 'pry-byebug', '~> 3.7.0'
 end
 
 group :development do
