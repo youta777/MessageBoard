@@ -32,7 +32,7 @@ class MessagesController < ApplicationController
   end
 
   def update
-    if @message.save
+    if @message.update(message_params)
       flash[:success] = "Messageは更新されました"
       redirect_to @message
     else
@@ -53,7 +53,7 @@ class MessagesController < ApplicationController
   # Strong Parameter
   def message_params
     # Messageフォームのフォームから得られるcontentカラムの内容だけをフィルタリング
-    params.require(:message).permit(:content)
+    params.require(:message).permit(:content, :title)
   end
 
   def set_message

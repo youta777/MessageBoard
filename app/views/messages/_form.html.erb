@@ -16,9 +16,14 @@
   <% end %>
   <%# ------------------------ %>
 
+  <%= f.label :title, 'タイトル' %>
+
+  <%= f.text_field :title, autocomplete: 'off' %>
+
+
   <%= f.label :content, 'メッセージ' %>
 
-  <%= f.text_field :content %>
+  <%= f.text_field :content, autocomplete: 'off' %>
 
 
   <%= f.submit '投稿' %>
