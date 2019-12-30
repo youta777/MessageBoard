@@ -1,19 +1,38 @@
 <h1>メッセージ一覧</h1>
 
-<ul>
-  <% @messages.each do |message| %>
+<% if @messages.any? %>
 
-    <li>
-      <%= link_to message.id, message %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>タイトル</th>
+        <th>メッセージ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @messages.each do |message| %>
 
-      <%= message.title %>
-      &gt;
-      <%= message.content %>
-    </li>
+        <tr>
+          <td>
+            <%= link_to message.id, message %>
+          </td>
+          <td>
+            <%= message.title %>
+          </td>
+          <td>
+            <%= message.content %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-  <% end %>
-</ul>
+  <div>
+    <%= paginate @messages %>
+  </div>
 
-<%= paginate @messages %>
+<% end %>
 
-<%= link_to '新規投稿', new_message_path %>
+
+<%= link_to '新規投稿', new_message_path, class: "btn btn-primary" %>
